@@ -2,7 +2,7 @@ import React from 'react'
 import ButtonCTA from '../../components/buttonCTA/ButtonCTA'
 import * as url from '../../images/home-page-background.jpg'
 
-const Home = ({ setCurrentTab }) => {
+const Home = () => {
 	return (
 		<section id="Home" className="section">
 			<div className="home-background">
@@ -23,9 +23,9 @@ const Home = ({ setCurrentTab }) => {
 							</p>
 							<ButtonCTA
 								text={'Projects'}
-								link={'/#Portfolio'}
-								width={`clamp(150px, 30vw , 270px)`}
-								height={`clamp(30px, 5vw , 48px)`}
+								link={'/#Projects'}
+								width={`clamp(250px, 30vw , 270px)`}
+								height={`clamp(48px, 5vw , 48px)`}
 							/>
 						</div>
 					</div>

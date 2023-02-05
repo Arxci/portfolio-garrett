@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useRef } from 'react'
 import ButtonCTA from '../buttonCTA/ButtonCTA'
 import HeaderLink from './headerLink/HeaderLink'
 import HamburgerMenu from './hamburgerMenu/HamburgerMenu'
@@ -6,6 +6,8 @@ import { HashLink as Link } from 'react-router-hash-link'
 
 const Header = () => {
 	const [toggleOpen, setToggleOpen] = useState(false)
+	const [headerVisibility, setHeaderVisibility] = useState('')
+	var lastScroll = useRef(0)
 
 	useEffect(() => {
 		function OnScroll() {
@@ -37,17 +39,37 @@ const Header = () => {
 					link.classList.add('active')
 				}
 			})
+
+			var st = window.pageYOffset || document.documentElement.scrollTop
+			if (st > lastScroll.current && st > 150) {
+				setHeaderVisibility('hidden')
+			} else if (st < lastScroll.current) {
+				setHeaderVisibility('')
+			}
+			lastScroll.current = st < 0 ? 0 : st
+		}
+
+		function OnResize() {
+			if (window.innerWidth >= 1120) {
+				setToggleOpen(false)
+			}
 		}
 
 		window.addEventListener('scroll', () => OnScroll())
+		window.addEventListener('touchmove', () => OnScroll())
+		window.addEventListener('resize', () => OnResize())
 		OnScroll()
 
-		return window.removeEventListener('scroll', () => OnScroll())
-	}, [])
+		return () => {
+			window.removeEventListener('scroll', () => OnScroll())
+			window.removeEventListener('touchmove', () => OnScroll())
+			window.removeEventListener('resize', () => OnResize())
+		}
+	}, [setHeaderVisibility, setToggleOpen])
 
 	return (
 		<header className="header">
-			<div className="header__container">
+			<div className={'header__container ' + headerVisibility}>
 				<div className="header__wrapper container">
 					<nav className="header__nav">
 						<ol className="header__nav-list">
@@ -59,13 +81,18 @@ const Header = () => {
 							<li className="header__nav-list-item hide-for-mobile">
 								<ol className="header__nav-links">
 									<HeaderLink text={'Home'} link={'/#Home'} />
-									<HeaderLink text={'Projects'} link={'/#Portfolio'} />
+									<HeaderLink text={'Projects'} link={'/#Projects'} />
 									<HeaderLink text={'About'} link={'#'} />
 									<HeaderLink text={'Contact'} link={'#'} />
 								</ol>
 							</li>
 							<div className="hide-for-mobile">
-								<ButtonCTA text={'Resume'} link={'#'} />
+								<ButtonCTA
+									text={'Resume'}
+									link={'#'}
+									width={'170px'}
+									height={'42px'}
+								/>
 							</div>
 
 							<i
@@ -76,7 +103,11 @@ const Header = () => {
 					</nav>
 				</div>
 			</div>
-			<HamburgerMenu setToggleOpen={setToggleOpen} toggleOpen={toggleOpen} />
+			<HamburgerMenu
+				setToggleOpen={setToggleOpen}
+				toggleOpen={toggleOpen}
+				headerVisibility={headerVisibility}
+			/>
 		</header>
 	)
 }

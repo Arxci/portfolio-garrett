@@ -2,7 +2,7 @@ import React from 'react'
 import HamburgerLink from './hamburgerLink/HamburgerLink'
 import ButtonCTA from '../../buttonCTA/ButtonCTA'
 
-const HamburgerMenu = ({ setToggleOpen, toggleOpen }) => {
+const HamburgerMenu = ({ setToggleOpen, toggleOpen, headerVisibility }) => {
 	return (
 		<div className={toggleOpen ? 'hamburger-menu open' : 'hamburger-menu'}>
 			<span
@@ -10,7 +10,7 @@ const HamburgerMenu = ({ setToggleOpen, toggleOpen }) => {
 				onClick={() => setToggleOpen(false)}
 			/>
 			<div className="hamburger-menu__container">
-				<div className="hamburger-menu__wrapper">
+				<div className={'hamburger-menu__wrapper ' + headerVisibility}>
 					<nav className="hamburger__nav">
 						<ol className="hamburger__nav__list">
 							<HamburgerLink

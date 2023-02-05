@@ -1,0 +1,38 @@
+.projects {
+	&-content {
+		height: stretch;
+
+		&-wrapper {
+			display: flex;
+			height: stretch;
+			flex-direction: column;
+			gap: 2rem;
+		}
+
+		&-container {
+			height: stretch;
+			display: grid;
+			gap: 2rem;
+
+			grid-template-columns: repeat(6, 1fr);
+			grid-template-rows: 1fr 1fr;
+		}
+	}
+
+	&-text {
+		&__primary {
+			font-size: 3rem;
+			position: relative;
+			height: max-content;
+
+			&::before {
+				content: '';
+				position: absolute;
+				width: 100px;
+				height: 2px;
+				background-color: $accent;
+				bottom: -2px;
+			}
+		}
+	}
+}

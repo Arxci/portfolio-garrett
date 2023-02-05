@@ -1,0 +1,85 @@
+.project {
+	background-color: $backgroundColor;
+	border: 1px solid rgba($white, 0.5);
+	height: stretch;
+	width: stretch;
+	position: relative;
+
+	&.large {
+		grid-column: span 4;
+	}
+
+	&.small {
+		grid-column: span 2;
+	}
+
+	&-background {
+		position: absolute;
+		display: inline-block;
+		width: stretch;
+		height: stretch;
+		z-index: 1;
+
+		&-image {
+			position: relative;
+			width: stretch;
+			height: 100%;
+			z-index: -1;
+			display: block;
+			object-fit: cover;
+		}
+	}
+
+	&-container {
+		position: relative;
+		height: 100%;
+		z-index: 2;
+		background: linear-gradient(
+			to right,
+			rgba($backgroundColor, 1) 0%,
+			rgba($backgroundColor, 0.5) 100%
+		);
+	}
+
+	&-wrapper {
+		display: flex;
+		height: calc(100% - 2rem);
+		padding: 1rem;
+		flex-direction: column;
+		gap: 20px;
+	}
+
+	&-content-text {
+		display: flex;
+		flex-direction: column;
+		flex: 1;
+	}
+
+	&-description {
+		height: 100%;
+		display: flex;
+		align-items: flex-end;
+	}
+
+	&-text {
+		&-title {
+			font-weight: 600;
+		}
+
+		&-date {
+			font-weight: 300;
+			color: rgba($white, 0.5);
+		}
+
+		&-description {
+			display: -webkit-box;
+			overflow: hidden;
+			-webkit-box-orient: vertical;
+			-webkit-line-clamp: 2;
+			font-weight: 400;
+		}
+	}
+
+	&-content-lower {
+	}
+}
