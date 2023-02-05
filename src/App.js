@@ -1,25 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import { Suspense, useState } from 'react'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import Header from './components/header/Header'
+import Home from './sections/home/Home'
+import Projects from './sections/projects/Projects'
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	const [currentTab, setCurrentTab] = useState(1)
+
+	return (
+		<div className="app">
+			<BrowserRouter>
+				<Header currentTab={currentTab} />
+				<div className="app-sections">
+					<Suspense>
+						<Routes>
+							<Route
+								path="/"
+								element={
+									<>
+										<Home setCurrentTab={setCurrentTab} />
+										<Projects setCurrentTab={setCurrentTab} />
+									</>
+								}
+							/>
+						</Routes>
+					</Suspense>
+				</div>
+			</BrowserRouter>
+		</div>
+	)
 }
 
-export default App;
+export default App

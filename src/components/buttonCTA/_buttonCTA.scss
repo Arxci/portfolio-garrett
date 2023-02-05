@@ -1,0 +1,17 @@
+.button-cta {
+	background-color: $white;
+	color: $black;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-weight: 500;
+	font-size: 1em;
+
+	transition: filter 150ms ease-in-out;
+
+	&:hover,
+	&:focus {
+		filter: brightness(0.75);
+	}
+}

@@ -1,0 +1,67 @@
+.home {
+	&-background {
+		position: absolute;
+		display: inline-block;
+		width: stretch;
+		height: stretch;
+
+		background: linear-gradient(
+			to top,
+			rgba($black, 1) 0%,
+			rgba($black, 0.3) 90%
+		);
+
+		&-image {
+			width: stretch;
+			height: stretch;
+			z-index: -1;
+			position: relative;
+			display: block;
+			object-fit: cover;
+		}
+	}
+	&-content {
+		height: stretch;
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+		background-position: right, center;
+
+		background-repeat: no-repeat;
+		background-size: cover;
+
+		&-wrapper {
+			z-index: 2;
+			display: flex;
+			flex-direction: column;
+			gap: 3rem;
+
+			@include breakpoint-down(small) {
+				align-items: center;
+				gap: 20px;
+			}
+		}
+	}
+
+	&-text {
+		&__primary {
+			z-index: 2;
+			font-size: 6rem;
+
+			@include breakpoint-down(medium) {
+				font-size: calc(0.8em + 5vw);
+			}
+		}
+
+		&__secondary {
+			z-index: 2;
+			font-size: 1.5rem;
+			font-weight: 200;
+
+			@include breakpoint-down(medium) {
+				font-size: calc(0.4em + 1vw);
+				font-weight: 300;
+			}
+		}
+	}
+}
