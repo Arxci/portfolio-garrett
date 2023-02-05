@@ -8,7 +8,7 @@
 		top: 0;
 		width: 100vw;
 		height: $headerHeight;
-		background-color: rgba($backgroundColor, 0.7);
+		background-color: rgba($backgroundColor, 1);
 		border-bottom: 1px solid $white;
 		transition: top 100ms ease-in-out;
 		display: flex;
@@ -95,13 +95,23 @@
 			transform: translateX(0);
 		}
 
+		&__button {
+			z-index: 1;
+			right: 0;
+			margin: 2rem;
+			position: absolute;
+
+			@include breakpoint-down(small) {
+				margin: 2rem 1rem;
+			}
+		}
+
 		&__remainder {
 			width: 20%;
 		}
 
 		&__container {
 			position: relative;
-
 			width: 90%;
 		}
 
@@ -114,20 +124,15 @@
 				rgba($backgroundColor, 1) 0%,
 				rgba($backgroundColor, 0.5) 40%
 			);
-			padding: 2rem;
+			padding: calc(2rem + $headerHeight) 2rem;
 			text-align: right;
-			margin-top: $headerHeight;
+
 			display: flex;
 			justify-content: flex-end;
 			backdrop-filter: blur(10px);
-			transition: margin-top 100ms ease-in-out;
 
 			@include breakpoint-down(small) {
-				padding: 1rem;
-			}
-
-			&.hidden {
-				margin-top: 0rem;
+				padding: calc(1rem + $headerHeight) 1rem;
 			}
 		}
 	}

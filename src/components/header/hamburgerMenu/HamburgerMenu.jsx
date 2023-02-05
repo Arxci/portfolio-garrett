@@ -10,6 +10,12 @@ const HamburgerMenu = ({ setToggleOpen, toggleOpen, headerVisibility }) => {
 				onClick={() => setToggleOpen(false)}
 			/>
 			<div className="hamburger-menu__container">
+				<div className="hamburger-menu__button">
+					<i
+						onClick={() => setToggleOpen(!toggleOpen)}
+						className="fa-solid fa-bars hide-for-desktop"
+					></i>
+				</div>
 				<div className={'hamburger-menu__wrapper ' + headerVisibility}>
 					<nav className="hamburger__nav">
 						<ol className="hamburger__nav__list">

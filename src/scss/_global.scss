@@ -12,6 +12,17 @@ body {
 	background-color: $backgroundColor;
 }
 
+::-webkit-scrollbar {
+	background-color: $faded-white;
+	width: 0.5rem;
+	height: 0.5rem;
+}
+
+::-webkit-scrollbar-thumb {
+	border-radius: 10px;
+	background: $scroller-grey;
+}
+
 .container {
 	max-width: 90rem;
 	padding: 0rem 2rem;

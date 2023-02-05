@@ -1,8 +1,10 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import ButtonCTA from '../buttonCTA/ButtonCTA'
+import ProjectTool from '../projectTool/ProjectTool'
 
-const ProjectCard = ({ size, title, date, description, image }) => {
-	const imageSource = require('../../images/' + image + '.jpg')
+const ProjectCard = ({ size, title, date, tools, image, github, link }) => {
+	const imageSource = require('../../images/' + image)
 
 	return (
 		<div className={'project ' + size}>
@@ -16,19 +18,31 @@ const ProjectCard = ({ size, title, date, description, image }) => {
 			<div className="project-container">
 				<div className="project-wrapper">
 					<div className="project-content-text">
-						<h2 className="project-text-title">{title}</h2>
+						<div className="project-title">
+							<Link to={link} target="_blank" rel="noopener noreferrer">
+								<h2 className="project-text-title">{title}</h2>
+							</Link>
+						</div>
+
 						<h4 className="project-text-date">{date}</h4>
-						<div className="project-description">
-							<h3 className="project-text-description">{description}</h3>
+						<div className="project-tools">
+							<div className="project-tools-scroller">
+								{tools.map((tool) => (
+									<ProjectTool key={tool.id} tool={tool} />
+								))}
+							</div>
 						</div>
 					</div>
 					<div className="project-content-lower">
 						<ButtonCTA
 							text={'Live Site'}
-							link={'/#Projects'}
-							width={`clamp(250px, 30vw , 270px)`}
-							height={`clamp(48px, 5vw , 48px)`}
+							link={link}
+							width={`clamp(100px, 20vw , 220px)`}
+							height={`clamp(42px, 5vw , 42px)`}
 						/>
+						<Link to={github} target="_blank" rel="noopener noreferrer">
+							<i className="fa-brands fa-github"></i>
+						</Link>
 					</div>
 				</div>
 			</div>
@@ -40,8 +54,31 @@ ProjectCard.defaultProps = {
 	size: 'small',
 	title: 'Project Title',
 	date: '01/01/2023',
-	description:
-		'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur facilis eaque eius enim ipsa in est possimus sit incidunt delectus asperiores, modi architecto placeat at harum porro, reprehenderit numquam accusantium tempora voluptates repellendus? Qui aspernatur quas officiis perferendis quos sequi, doloremque quaerat ratione obcaecati. Dignissimos sapiente laboriosam esse possimus vitae, hic voluptatum eum facilis eius, fuga, enim provident ullam consequuntur ab eaque omnis voluptate eos veniam quaerat eligendi beatae ratione? Vel deserunt quae necessitatibus accusantium iste. Cumque sed dolorem quisquam error repellat. Maiores saepe at rerum voluptatibus mollitia! Recusandae assumenda veniam, eveniet cum at nisi nam quos illo perspiciatis autem?',
+	tools: [
+		{
+			name: 'ReactJS',
+			id: 0,
+		},
+		{
+			name: 'CSS',
+			id: 1,
+		},
+		{
+			name: 'HTML',
+			id: 2,
+		},
+		{
+			name: 'TailwindCSS',
+			id: 3,
+		},
+		{
+			name: 'Javascript',
+			id: 4,
+		},
+	],
+	image: 'home-page-background.jpg',
+	github: '#',
+	link: '/#Projects',
 }
 
 export default ProjectCard

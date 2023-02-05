@@ -12,28 +12,44 @@ const Projects = () => {
 							<div className="projects-content-container">
 								<ProjectCard
 									size={'large'}
-									image={'home-page-background'}
+									image={'MovieApp.png'}
 									title="Movie App"
 									date="02/04/2023"
-									description="Leveraged the TMDB api to create a full scale front end movie application. Includes searching/discovery of movies, people, and TV shows. Learn more about the cast/media by viewing the profiles"
+									link="https://garrett-humbert-movie-app.netlify.app"
+									tools={[
+										{ name: 'React', key: 0 },
+										{ name: 'Sass', key: 1 },
+										{ name: 'HTML', key: 2 },
+										{ name: 'TMDB', key: 2 },
+									]}
 								/>
 								<ProjectCard
 									size={'small'}
-									image={'pexels-anubhaw-anand-2027697'}
+									image={'ChessEngine.png'}
 									title="Chess Engine"
 									date="12/05/2022"
-									description="This application is a an AI. The AI is built using the minimax algorithm with alpha beta pruning which allows the AI to efficiently and accurately predict moves"
+									link="https://chess-engine-garrett-humbert.netlify.app"
+									tools={[
+										{ name: 'Javascript', key: 0 },
+										{ name: 'CSS', key: 1 },
+										{ name: 'HTML', key: 2 },
+									]}
 								/>
 								<ProjectCard
 									size={'small'}
-									image={'pexels-sevenstorm-juhaszimrus-1302326'}
+									image={'pexels-sevenstorm-juhaszimrus-1302326.jpg'}
 								/>
 								<ProjectCard
 									size={'large'}
-									image={'pexels-luan-gracioli-13867184'}
+									image={'Pathfinder.png'}
 									title="Path Finding Visualizer"
 									date="06/05/2022"
-									description="This is a visually satisfying application where you place down obstacles to find a path from the start to the end node. There are three different search algorithms you can choose from, A Star, Dijkstra's, and Depth First Search. You can create randomly generated mazes by utilizing recursive division, place walls to create your own obstacles, or move the start and end points to customize the search to your desire."
+									link="https://garrett-humbert-pathfinder.netlify.app/"
+									tools={[
+										{ name: 'React', key: 0 },
+										{ name: 'Sass', key: 1 },
+										{ name: 'HTML', key: 2 },
+									]}
 								/>
 							</div>
 						</div>
