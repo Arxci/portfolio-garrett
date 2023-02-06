@@ -89,9 +89,10 @@ const Header = () => {
 							<div className="hide-for-mobile">
 								<ButtonCTA
 									text={'Resume'}
-									link={'#'}
+									link={''}
 									width={'170px'}
 									height={'42px'}
+									target=""
 								/>
 							</div>
 

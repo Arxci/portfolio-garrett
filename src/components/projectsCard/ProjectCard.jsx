@@ -28,7 +28,7 @@ const ProjectCard = ({ size, title, date, tools, image, github, link }) => {
 						<div className="project-tools">
 							<div className="project-tools-scroller">
 								{tools.map((tool) => (
-									<ProjectTool key={tool.id} tool={tool} />
+									<ProjectTool key={tool.key} tool={tool} />
 								))}
 							</div>
 						</div>
@@ -57,23 +57,15 @@ ProjectCard.defaultProps = {
 	tools: [
 		{
 			name: 'ReactJS',
-			id: 0,
+			key: 0,
 		},
 		{
 			name: 'CSS',
-			id: 1,
+			key: 1,
 		},
 		{
 			name: 'HTML',
-			id: 2,
-		},
-		{
-			name: 'TailwindCSS',
-			id: 3,
-		},
-		{
-			name: 'Javascript',
-			id: 4,
+			key: 2,
 		},
 	],
 	image: 'home-page-background.jpg',

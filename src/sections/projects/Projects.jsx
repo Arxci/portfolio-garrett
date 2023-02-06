@@ -20,13 +20,14 @@ const Projects = () => {
 										{ name: 'React', key: 0 },
 										{ name: 'Sass', key: 1 },
 										{ name: 'HTML', key: 2 },
-										{ name: 'TMDB', key: 2 },
+										{ name: 'TMDB', key: 3 },
 									]}
+									github="https://github.com/Arxci/movie__app"
 								/>
 								<ProjectCard
 									size={'small'}
 									image={'ChessEngine.png'}
-									title="Chess Engine"
+									title="Chess AI"
 									date="12/05/2022"
 									link="https://chess-engine-garrett-humbert.netlify.app"
 									tools={[
@@ -34,6 +35,7 @@ const Projects = () => {
 										{ name: 'CSS', key: 1 },
 										{ name: 'HTML', key: 2 },
 									]}
+									github="https://github.com/Arxci/Chess-Engine"
 								/>
 								<ProjectCard
 									size={'small'}
@@ -50,6 +52,7 @@ const Projects = () => {
 										{ name: 'Sass', key: 1 },
 										{ name: 'HTML', key: 2 },
 									]}
+									github="https://github.com/Arxci/Pathfinding-Visualizer"
 								/>
 							</div>
 						</div>

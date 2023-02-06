@@ -1,12 +1,11 @@
 import React from 'react'
 import { HashLink as Link } from 'react-router-hash-link'
 
-const ButtonCTA = ({ text, link, width, height, onPressed }) => {
+const ButtonCTA = ({ text, link, width, height, onPressed, target }) => {
 	return (
 		<Link
 			to={link}
-			target="_blank"
-			rel="noopener noreferrer"
+			target={target}
 			style={{ width: width, height: height }}
 			className="button-cta"
 			onClick={() => onPressed()}
@@ -21,6 +20,8 @@ ButtonCTA.defaultProps = {
 	link: '#',
 	width: '160px',
 	height: '32px',
+	onPressed: () => {},
+	target: '_blank',
 }
 
 export default ButtonCTA

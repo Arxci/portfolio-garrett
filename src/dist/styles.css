@@ -348,7 +348,7 @@ body {
   height: stretch;
   display: grid;
   gap: 2rem;
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: repeat(7, 1fr);
   grid-template-rows: 1fr 1fr;
 }
 @media (max-width: 69.9375rem) {
@@ -394,7 +394,7 @@ body {
   }
 }
 .project.small {
-  grid-column: span 2;
+  grid-column: span 3;
 }
 @media (max-width: 69.9375rem) {
   .project.small {
