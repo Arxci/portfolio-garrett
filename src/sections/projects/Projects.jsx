@@ -29,7 +29,7 @@ const Projects = () => {
 									image={'ChessEngine.png'}
 									title="Chess AI"
 									date="12/05/2022"
-									link="https://chess-engine-garrett-humbert.netlify.app"
+									link="https://garrett-humbert-chess-ai.netlify.app/"
 									tools={[
 										{ name: 'Javascript', key: 0 },
 										{ name: 'CSS', key: 1 },
@@ -39,7 +39,16 @@ const Projects = () => {
 								/>
 								<ProjectCard
 									size={'small'}
-									image={'pexels-sevenstorm-juhaszimrus-1302326.jpg'}
+									image={'RealtorGO.png'}
+									title="Front End Realtor Website"
+									date="02/10/2023"
+									link={'https://garrett-humbert-realtor-go.netlify.app'}
+									tools={[
+										{ name: 'React', key: 0 },
+										{ name: 'Sass', key: 1 },
+										{ name: 'HTML', key: 2 },
+									]}
+									github="https://github.com/Arxci/Realtor.GO"
 								/>
 								<ProjectCard
 									size={'large'}

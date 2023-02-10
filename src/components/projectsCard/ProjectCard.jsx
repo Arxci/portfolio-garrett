@@ -37,8 +37,8 @@ const ProjectCard = ({ size, title, date, tools, image, github, link }) => {
 						<ButtonCTA
 							text={'Live Site'}
 							link={link}
-							width={`clamp(100px, 20vw , 220px)`}
-							height={`clamp(42px, 5vw , 42px)`}
+							width={`clamp(130px, 20vw , 220px)`}
+							height={`clamp(35px, 5vw , 42px)`}
 						/>
 						<Link to={github} target="_blank" rel="noopener noreferrer">
 							<i className="fa-brands fa-github"></i>

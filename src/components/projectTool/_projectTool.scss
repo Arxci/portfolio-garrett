@@ -3,4 +3,8 @@
 	border-radius: 100px;
 	padding: 0.1rem 0.5rem;
 	height: max-content;
+
+	@include breakpoint-down(small) {
+		font-size: calc(0.3em + 3vw);
+	}
 }
