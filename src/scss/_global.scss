@@ -32,28 +32,6 @@ body {
 	}
 }
 
-.section {
-	height: 100vh;
-	display: flex;
-	align-items: flex-end;
-	justify-content: center;
-	position: relative;
-
-	&__container {
-		width: stretch;
-		height: calc(100vh - $headerHeight);
-	}
-
-	&__wrapper {
-		height: stretch;
-		margin: 2rem 0rem;
-
-		@include breakpoint-down(small) {
-			margin: 1rem 0rem;
-		}
-	}
-}
-
 .hide-for-mobile {
 	@include breakpoint-down(medium) {
 		display: none;

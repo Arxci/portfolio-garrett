@@ -11,3 +11,6 @@ $accent: #ed0000;
 $backgroundColor: $black;
 
 $headerHeight: 5rem;
+
+$height: calc(100vh - $headerHeight);
+$max-height: 1000px;

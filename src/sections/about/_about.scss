@@ -1,0 +1,98 @@
+.about {
+	&-content {
+		min-height: 500px;
+		height: max-content;
+		position: relative;
+
+		&::before {
+			content: 'About';
+			position: absolute;
+			font-weight: 300;
+			top: 48px;
+			left: 0;
+			font-size: clamp(7rem, 20vw, 20rem);
+			color: rgba($white, 0.125);
+			z-index: -1;
+
+			@include breakpoint-down(small) {
+				top: 0px;
+			}
+		}
+
+		&-wrapper {
+			display: flex;
+			width: stretch;
+			height: stretch;
+			gap: 2rem;
+			flex-direction: column;
+		}
+
+		&-text {
+			display: flex;
+			flex-direction: column;
+			gap: 2rem;
+		}
+	}
+
+	&-section {
+		display: flex;
+		align-items: center;
+		padding-top: calc($headerHeight + 2rem);
+		flex-direction: column;
+		position: relative;
+
+		@include breakpoint-down(small) {
+			padding-top: 0rem;
+		}
+
+		&__container {
+			width: stretch;
+			height: max-content;
+			padding-top: calc($headerHeight + 2rem);
+			margin-bottom: 2rem;
+		}
+
+		&__wrapper {
+			height: stretch;
+
+			@include breakpoint-down(small) {
+				margin: 1rem 0rem;
+			}
+		}
+	}
+
+	&-text {
+		&__primary {
+			font-size: 3rem;
+			position: relative;
+			height: max-content;
+
+			&::before {
+				content: '';
+				position: absolute;
+				width: 100px;
+
+				height: 2px;
+				background-color: $accent;
+				bottom: -2px;
+			}
+		}
+
+		&__secondary {
+			line-height: 3;
+			color: rgba($white, 0.8);
+			font-size: 1.5rem;
+
+			@include breakpoint-down(large) {
+				font-size: calc(1em + 0.5vw);
+			}
+		}
+	}
+
+	&-skills {
+		background-color: rgba($white, 0.5);
+		height: 350px;
+		width: stretch;
+		margin-bottom: 4rem;
+	}
+}

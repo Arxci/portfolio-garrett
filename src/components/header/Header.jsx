@@ -82,13 +82,13 @@ const Header = () => {
 								<ol className="header__nav-links">
 									<HeaderLink text={'Home'} link={'/#Home'} />
 									<HeaderLink text={'Projects'} link={'/#Projects'} />
-									<HeaderLink text={'About'} link={'#'} />
+									<HeaderLink text={'About'} link={'#About'} />
 									<HeaderLink text={'Contact'} link={'#'} />
 								</ol>
 							</li>
 							<div className="hide-for-mobile">
 								<ButtonCTA
-									text={'Resume'}
+									text={'Contact Me'}
 									link={''}
 									width={'170px'}
 									height={'42px'}

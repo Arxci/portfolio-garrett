@@ -1,6 +1,6 @@
 .projects {
 	&-content {
-		height: stretch;
+		min-height: max-content;
 
 		&-wrapper {
 			display: flex;
@@ -15,11 +15,32 @@
 			gap: 2rem;
 
 			grid-template-columns: repeat(7, 1fr);
-			grid-template-rows: 1fr 1fr;
+			grid-template-rows: 350px 350px;
 
 			@include breakpoint-down(medium) {
 				grid-template-columns: 1fr;
 				grid-template-rows: repeat(4, 300px);
+			}
+		}
+	}
+
+	&-section {
+		display: flex;
+		align-items: flex-end;
+		justify-content: center;
+		position: relative;
+
+		&__container {
+			width: stretch;
+			height: max-content;
+			margin-top: calc($headerHeight + 2rem);
+		}
+
+		&__wrapper {
+			height: stretch;
+
+			@include breakpoint-down(small) {
+				margin: 1rem 0rem;
 			}
 		}
 	}

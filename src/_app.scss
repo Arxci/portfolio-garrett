@@ -2,6 +2,7 @@
 	min-height: 100vh;
 
 	&-sections {
-		min-height: calc(100vh - $headerHeight);
+		min-height: $height;
+		max-height: $max-height !important;
 	}
 }

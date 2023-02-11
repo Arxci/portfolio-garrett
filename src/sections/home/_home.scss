@@ -21,6 +21,31 @@
 		}
 	}
 
+	&-section {
+		height: 100vh;
+		max-height: $max-height;
+		display: flex;
+		align-items: flex-end;
+		justify-content: center;
+		position: relative;
+
+		&__container {
+			width: stretch;
+			height: calc(100vh - $headerHeight);
+			max-height: $max-height;
+			min-height: max-content;
+		}
+
+		&__wrapper {
+			height: stretch;
+			margin: 2rem 0rem;
+
+			@include breakpoint-down(small) {
+				margin: 1rem 0rem;
+			}
+		}
+	}
+
 	&-content {
 		height: stretch;
 		display: flex;

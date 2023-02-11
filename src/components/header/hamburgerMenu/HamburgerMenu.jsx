@@ -31,7 +31,7 @@ const HamburgerMenu = ({ setToggleOpen, toggleOpen, headerVisibility }) => {
 							/>
 							<HamburgerLink
 								text={'About'}
-								link={'/'}
+								link={'/#About'}
 								setToggleOpen={setToggleOpen}
 							/>
 							<HamburgerLink
@@ -40,7 +40,7 @@ const HamburgerMenu = ({ setToggleOpen, toggleOpen, headerVisibility }) => {
 								setToggleOpen={setToggleOpen}
 							/>
 							<ButtonCTA
-								text={'Resume'}
+								text={'Contact Me'}
 								link={'#'}
 								width={'170px'}
 								height={'40px'}

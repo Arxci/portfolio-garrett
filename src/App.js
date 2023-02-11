@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Header from './components/header/Header'
 import Home from './sections/home/Home'
 import Projects from './sections/projects/Projects'
+import About from './sections/about/About'
 
 function App() {
 	return (
@@ -18,6 +19,7 @@ function App() {
 									<>
 										<Home />
 										<Projects />
+										<About />
 									</>
 								}
 							/>

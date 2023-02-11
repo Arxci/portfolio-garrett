@@ -4,7 +4,7 @@ import * as url from '../../images/home-page-background.jpg'
 
 const Home = () => {
 	return (
-		<section id="Home" className="section">
+		<section id="Home" className="home-section section">
 			<div className="home-background">
 				<img
 					className="home-background-image"
@@ -13,8 +13,8 @@ const Home = () => {
 				/>
 			</div>
 
-			<div className="section__container container">
-				<div className="section__wrapper">
+			<div className="home-section__container container">
+				<div className="home-section__wrapper">
 					<div className="home-content">
 						<div className="home-content-wrapper">
 							<h1 className="home-text__primary">Garrett Humbert</h1>
@@ -26,6 +26,7 @@ const Home = () => {
 								link={'/#Projects'}
 								width={`clamp(250px, 30vw , 270px)`}
 								height={`clamp(48px, 5vw , 48px)`}
+								target=""
 							/>
 						</div>
 					</div>
