@@ -29,7 +29,84 @@ const About = () => {
 					</div>
 				</div>
 			</div>
-			<div className="about-skills"></div>
+			<div className="about-skills">
+				<div className="slider container">
+					<div className="slide-track">
+						<div className="slide">
+							<i className="fa-brands fa-react"></i>
+							<p>React</p>
+						</div>
+						<div className="slide">
+							<i className="fa-brands fa-html5"></i>
+							<p>HTML</p>
+						</div>
+						<div className="slide">
+							<i className="fa-brands fa-js"></i>
+							<p>Javascript</p>
+						</div>
+						<div className="slide">
+							<i className="fa-brands fa-sass"></i>
+							<p>SASS</p>
+						</div>
+						<div className="slide">
+							<i className="fa-brands fa-python"></i>
+							<p>Python</p>
+						</div>
+						<div className="slide">
+							<i className="fa-brands fa-java"></i>
+							<p>Java</p>
+						</div>
+						<div className="slide">
+							<i className="fa-brands fa-react"></i>
+							<p>React</p>
+						</div>
+						<div className="slide">
+							<i className="fa-brands fa-html5"></i>
+							<p>HTML</p>
+						</div>
+						<div className="slide">
+							<i className="fa-brands fa-js"></i>
+							<p>Javascript</p>
+						</div>
+						<div className="slide">
+							<i className="fa-brands fa-sass"></i>
+							<p>SASS</p>
+						</div>
+						<div className="slide">
+							<i className="fa-brands fa-python"></i>
+							<p>Python</p>
+						</div>
+						<div className="slide">
+							<i className="fa-brands fa-java"></i>
+							<p>Java</p>
+						</div>
+						<div className="slide">
+							<i className="fa-brands fa-react"></i>
+							<p>React</p>
+						</div>
+						<div className="slide">
+							<i className="fa-brands fa-html5"></i>
+							<p>HTML</p>
+						</div>
+						<div className="slide">
+							<i className="fa-brands fa-js"></i>
+							<p>Javascript</p>
+						</div>
+						<div className="slide">
+							<i className="fa-brands fa-sass"></i>
+							<p>SASS</p>
+						</div>
+						<div className="slide">
+							<i className="fa-brands fa-python"></i>
+							<p>Python</p>
+						</div>
+						<div className="slide">
+							<i className="fa-brands fa-java"></i>
+							<p>Java</p>
+						</div>
+					</div>
+				</div>
+			</div>
 		</section>
 	)
 }
